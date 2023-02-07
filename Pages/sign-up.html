@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Images/Icono.png">
+    <title>Baire | Register</title>
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <img class="header__logo" src="../Images/audio-waves.png" alt="logo-icon">
+            <button id="open" class="open-menu"><i class="bi bi-list"></i></button>
+            
+            <nav class="navbar" id="navbar">
+                <button id="close" class="close-menu"><i class="bi bi-x"></i></button>
+                <ul class="navbar__items">
+                    <li><a class="navbar__link" href="../Pages/shop.html">Shop</a></li>
+                    <li><a class="navbar__link" href="../Pages/about-us.html">About us</a></li>
+                    <li><a class="navbar__link" href="../Pages/login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <form id="formSaveData">
+                <h2 id="TitleRegister">Register</h2>
+                <p>Already have an account? <a href="./login.html">Login</a></p>
+                <div id="divFirstName">
+                    <label for="firstName">First Name</label>
+                    <input id="inputFirstName" type="text" placeholder="First Name" required>
+                </div>
+                <div id="divLasttName">
+                    <label for="lasttName">Last Name</label>
+                    <input id="inputLasttName" type="text" placeholder="Last Name" required>
+                </div>
+                <div id="divEmail">
+                    <label for="email">Email</label>
+                    <input id="inputEmail" type="email" placeholder="Email" required>
+                </div>
+                <div id="divPassword">
+                    <label for="password">Password</label>
+                    <input id="inputPassword" type="password" placeholder="Password" required>
+                </div>
+                <div id="divConfirmPassword">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input id="inputConfirmPassword" type="password" placeholder="Confirm Password" required>
+                </div>
+                <div>
+                    <button id="btnClear" type="submit">Reload</button>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="../JavaScript/sign-up.js"></script>
+</body>
+</html>

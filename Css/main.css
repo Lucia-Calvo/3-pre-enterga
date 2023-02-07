@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 5vw 25px 3vw; }
+  .header .header__logo {
+    max-width: 5vh; }
+  .header .navbar__items {
+    display: flex;
+    gap: 3rem; }
+    .header .navbar__items li a {
+      color: white; }
+  .header .open-menu,
+  .header .close-menu {
+    display: none; }
+  @media screen and (max-width: 550px) {
+    .header .open-menu,
+    .header .close-menu {
+      display: block;
+      border: 0;
+      font-size: 1.25rem;
+      background-color: transparent;
+      cursor: pointer; }
+    .header .open-menu {
+      color: #ececec; }
+    .header .close-menu {
+      color: #ececec; }
+    .header .navbar {
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #1c1c1c;
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5); }
+      .header .navbar .navbar__items {
+        flex-direction: column;
+        align-items: end; }
+        .header .navbar .navbar__items .navbar__items li a {
+          color: #ecececec; }
+    .header .navbar.visible {
+      opacity: 1;
+      visibility: visible; } }
+
+.login-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .login-section #div-img img {
+    height: 100vh;
+    width: 50vw; }
+  .login-section #form-user {
+    background-color: black;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; }
+    .login-section #form-user #div-login {
+      position: absolute;
+      bottom: 55%; }
+      .login-section #form-user #div-login h2 {
+        color: white;
+        font-size: 80px;
+        font-family: "Righteous", cursive; }
+      .login-section #form-user #div-login p {
+        color: white;
+        font-size: 18px;
+        font-family: "Be Vietnam Pro", sans-serif; }
+        .login-section #form-user #div-login p a {
+          color: #607d8b;
+          font-family: "Righteous", cursive; }
+    .login-section #form-user #div-email input {
+      width: 45%;
+      height: 25px;
+      margin-bottom: 25px;
+      border-radius: 20px;
+      background-color: #d7d3d3;
+      outline: none;
+      border: 0; }
+    .login-section #form-user #div-password__input {
+      width: 45%;
+      height: 25px;
+      border-radius: 20px;
+      background-color: #d7d3d3;
+      outline: none;
+      border: 0; }
+    .login-section #form-user #div__remember-password {
+      margin-top: 15px; }
+      .login-section #form-user #div__remember-password label {
+        color: white;
+        font-size: 15px; }
+    .login-section #form-user #div-button {
+      padding-top: 45px; }
+      .login-section #form-user #div-button button {
+        width: 45%;
+        height: 45px;
+        border-radius: 20px;
+        font-size: 18px;
+        background-color: #607d8b;
+        color: white; }
