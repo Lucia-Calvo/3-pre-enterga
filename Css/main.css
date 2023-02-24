@@ -10,8 +10,21 @@ ul {
 a {
   text-decoration: none; }
 
+.cursor {
+  position: fixed;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 1000ms;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference; }
+
+.cursor.large {
+  transform: scale(6); }
+
 .header {
-  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,101 +34,156 @@ a {
   .header .navbar__items {
     display: flex;
     gap: 3rem; }
-    .header .navbar__items li a {
-      color: white; }
   .header .open-menu,
   .header .close-menu {
     display: none; }
-  @media screen and (max-width: 550px) {
-    .header .open-menu,
-    .header .close-menu {
-      display: block;
-      border: 0;
-      font-size: 1.25rem;
-      background-color: transparent;
-      cursor: pointer; }
-    .header .open-menu {
-      color: #ececec; }
-    .header .close-menu {
-      color: #ececec; }
-    .header .navbar {
-      opacity: 0;
-      visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      gap: 1rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #1c1c1c;
-      padding: 2rem;
-      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5); }
-      .header .navbar .navbar__items {
-        flex-direction: column;
-        align-items: end; }
-        .header .navbar .navbar__items .navbar__items li a {
-          color: #ecececec; }
-    .header .navbar.visible {
-      opacity: 1;
-      visibility: visible; } }
 
-.login-section {
+.Shop-now__buttom {
+  background-color: #607d8b;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 5vh;
+  width: 19vw;
+  margin-top: 5%;
+  transition: all 1s;
+  cursor: pointer; }
+
+.Shop-now__buttom:hover {
+  background-color: white;
+  color: #607d8b;
+  border: 3px solid #607d8b;
+  font-weight: bold; }
+
+.home-body {
+  background-image: url(/Images/Home-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; }
+
+.navbar__link {
+  color: white;
+  font-weight: bold;
+  font-size: 20px; }
+
+.navbar__link:hover {
+  border-bottom: 1px solid #607d8b; }
+
+.section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .login-section #div-img img {
-    height: 100vh;
-    width: 50vw; }
-  .login-section #form-user {
-    background-color: black;
-    height: 100vh;
-    width: 50vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  left: 5vw;
+  top: 20vh; }
+  .section .section__title-1 {
+    font-family: "Righteous", cursive;
+    font-size: 80px;
+    color: #607d8b; }
+  .section .section__title-2 {
+    font-family: "Righteous", cursive;
+    font-size: 80px;
+    color: white;
+    width: 30vw; }
+
+.signup-main {
+  background: black;
+  background-image: url(/Images/mayra-moretti-por3FNwFCbs-unsplash.jpg);
+  background-size: 50vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  height: 100vh; }
+
+.container {
+  position: absolute;
+  top: 20vh;
+  left: 60%;
+  padding: 50px 60px 50px 60px;
+  border: 8px solid black;
+  border-radius: 20px;
+  box-shadow: -5px -5px 15px #607d8b, 5px 5px 15px rgba(0, 0, 0, 0.35), inset -5px -5px 15px #607d8b, inset 5px 5px 15px rgba(0, 0, 0, 0.35); }
+  .container .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px; }
-    .login-section #form-user #div-login {
-      position: absolute;
-      bottom: 55%; }
-      .login-section #form-user #div-login h2 {
+    align-items: center;
+    gap: 25px; }
+    .container .form h2 {
+      color: white;
+      font-family: "Righteous", cursive;
+      font-size: 40px;
+      font-weight: 500; }
+    .container .form .inputBox {
+      position: relative;
+      width: 300px; }
+      .container .form .inputBox input {
+        padding: 12px 10px 12px 48px;
+        border: none;
+        width: 100%;
+        background: black;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
         color: white;
-        font-size: 80px;
-        font-family: "Righteous", cursive; }
-      .login-section #form-user #div-login p {
+        font-weight: 300;
+        font-size: 16px;
+        box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.35);
+        transition: 0.5s;
+        outline: none; }
+      .container .form .inputBox input:valid ~ span,
+      .container .form .inputBox input:focus ~ span {
+        color: #00dfc4;
+        border: 1px solid #607d8b;
+        background: black;
+        transform: translateX(25px) translateY(-7px);
+        font-size: 0.6em;
+        padding: 0.8px 4px;
+        border-radius: 10px; }
+      .container .form .inputBox input:valid,
+      .container .form .inputBox input:focus {
+        border: 1px solid #607d8b; }
+      .container .form .inputBox span {
+        position: absolute;
+        left: 0;
+        padding: 12px 10px 12px 48px;
+        pointer-events: none;
+        font-size: 14px;
+        font-weight: 200;
+        transition: 0.5s;
+        color: rgba(255, 255, 255, 0.5); }
+      .container .form .inputBox i {
+        position: absolute;
+        top: 15px;
+        left: 16px;
+        width: 25px;
+        padding: 2px 0;
+        padding-right: 8px;
+        color: #607d8b;
+        border-right: 1px solid #FFABD4; }
+      .container .form .inputBox .submit {
+        background: #607d8b;
         color: white;
-        font-size: 18px;
-        font-family: "Be Vietnam Pro", sans-serif; }
-        .login-section #form-user #div-login p a {
-          color: #607d8b;
-          font-family: "Righteous", cursive; }
-    .login-section #form-user #div-email input {
-      width: 45%;
-      height: 25px;
-      margin-bottom: 25px;
-      border-radius: 20px;
-      background-color: #d7d3d3;
-      outline: none;
-      border: 0; }
-    .login-section #form-user #div-password__input {
-      width: 45%;
-      height: 25px;
-      border-radius: 20px;
-      background-color: #d7d3d3;
-      outline: none;
-      border: 0; }
-    .login-section #form-user #div__remember-password {
-      margin-top: 15px; }
-      .login-section #form-user #div__remember-password label {
-        color: white;
-        font-size: 15px; }
-    .login-section #form-user #div-button {
-      padding-top: 45px; }
-      .login-section #form-user #div-button button {
-        width: 45%;
-        height: 45px;
-        border-radius: 20px;
-        font-size: 18px;
-        background-color: #607d8b;
-        color: white; }
+        padding: 10px 0;
+        letter-spacing: 0.8px;
+        font-size: 16px;
+        font-family: "Righteous", cursive;
+        box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.3), 5px 5px 15px rgba(0, 0, 0, 0.35), inset -5px -5px 15px rgba(255, 255, 255, 0.3), inset 5px 5px 15px rgba(0, 0, 0, 0.1);
+        cursor: pointer; }
+      .container .form .inputBox .success input {
+        border-color: #09c372; }
+      .container .form .inputBox .error {
+        color: #ff3860;
+        font-size: 9px;
+        height: 13px; }
+        .container .form .inputBox .error input {
+          border-color: #ff3860; }
+    .container .form p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 12px; }
+      .container .form p a {
+        font-weight: 500;
+        color: #FFABD4;
+        font-size: 14px;
+        padding-left: 5px; }

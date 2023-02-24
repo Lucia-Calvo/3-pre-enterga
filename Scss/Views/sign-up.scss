@@ -1,0 +1,124 @@
+.signup-main{
+    background: $black-color;
+    background-image: url(/Images/mayra-moretti-por3FNwFCbs-unsplash.jpg);
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    height: 100vh;
+    
+}
+
+.container{
+    position: absolute;
+    top: 20vh;
+    left: 60%;
+    padding: 50px 60px 50px 60px;
+    border: 8px solid $black-color;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px $primary-color, 
+    5px 5px 15px rgba(0,0,0,0.35),
+    inset -5px -5px 15px $primary-color,
+    inset 5px 5px 15px rgba(0,0,0,0.35);
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        h2{
+            color: $tertiary-color;
+            font-family: $secondary-typography;
+            font-size: 40px;
+            font-weight: 500;
+        }
+        .inputBox{
+            position: relative;
+            width: 300px;
+            input{
+                padding: 12px 10px 12px 48px;
+                border: none;
+                width: 100%;
+                background: $black-color;
+                border: 1px solid rgba(0,0,0,0.1);
+                border-radius: 25px;
+                color: $tertiary-color;
+                font-weight: 300;
+                font-size: 16px;
+                box-shadow: -5px -5px 15px rgba(255,255,255,0.2), 5px 5px 15px rgba(0,0,0,0.35);
+                transition: 0.5s;
+                outline: none;
+            }
+            input:valid ~ span,
+            input:focus ~ span{
+                color: #00dfc4;
+                border: 1px solid $primary-color;
+                background: $black-color;
+                transform: translateX(25px) translateY(-7px);
+                font-size: 0.6em;
+                padding: 0.8px 4px;
+                border-radius: 10px;
+            }
+            input:valid,
+            input:focus{
+                border: 1px solid $primary-color;
+            }
+            span{
+                position: absolute;
+                left: 0;
+                padding: 12px 10px 12px 48px;
+                pointer-events: none;
+                font-size: 14px;
+                font-weight: 200;
+                transition: 0.5s;
+                color: rgba(255,255,255,0.5);
+            }
+            i{
+                position: absolute;
+                top: 15px;
+                left: 16px;
+                width: 25px;
+                padding: 2px 0;
+                padding-right: 8px;
+                color: $primary-color;
+                border-right: 1px solid #FFABD4;
+            }
+            .submit{
+                background: $primary-color;
+                color: $tertiary-color;
+                padding: 10px 0;
+                letter-spacing: 0.8px;
+                font-size: 16px;
+                font-family: $secondary-typography;
+                box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.3), 
+                5px 5px 15px rgba(0,0,0,0.35),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.3),
+                inset 5px 5px 15px rgba(0,0,0,0.1);
+                cursor: pointer;
+            }
+            .success{
+                input {
+                    border-color: #09c372;
+                }
+            }
+            .error{
+                color: #ff3860;
+                font-size: 9px;
+                height: 13px;
+                input {
+                    border-color: #ff3860;
+                }
+            }
+        }
+        p{
+            color:rgba(255,255,255,0.5);
+            font-size: 12px;
+            a{
+                font-weight: 500;
+                color: #FFABD4;
+                font-size: 14px;
+                padding-left: 5px;
+            }
+        }
+    }
+}

@@ -8,14 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="shortcut icon" href="../Images/Icono.png">
     <title>Baire | Register</title>
 </head>
 
 <body>
-    <main>
+    <main class="signup-main">
+        <div class="cursor"></div>
         <header class="header">
-            <img class="header__logo" src="../Images/audio-waves.png" alt="logo-icon">
+            <a href="../index.html"><img class="header__logo" src="../Images/audio-waves.png" alt="logo-icon"></a>
             <button id="open" class="open-menu"><i class="bi bi-list"></i></button>
             
             <nav class="navbar" id="navbar">
@@ -28,37 +30,43 @@
             </nav>
         </header>
 
-        <section>
-            <form id="formSaveData">
-                <h2 id="TitleRegister">Register</h2>
-                <p>Already have an account? <a href="./login.html">Login</a></p>
-                <div id="divFirstName">
-                    <label for="firstName">First Name</label>
-                    <input id="inputFirstName" type="text" placeholder="First Name" required>
+        <div class="container">
+            <form id="form" class="form signup" action="/">
+                <h2>Sign Up</h2>
+                <div class="inputBox">
+                    <input id="username" type="text" required="required">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Username</span>
+                    <div class="error"></div>
                 </div>
-                <div id="divLasttName">
-                    <label for="lasttName">Last Name</label>
-                    <input id="inputLasttName" type="text" placeholder="Last Name" required>
+                <div class="inputBox">
+                    <input id="email" type="text" required="required">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Email address</span>
+                    <div class="error"></div>
                 </div>
-                <div id="divEmail">
-                    <label for="email">Email</label>
-                    <input id="inputEmail" type="email" placeholder="Email" required>
+                <div class="inputBox">
+                    <input id="password" type="password" required="required">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Create password</span>
+                    <div class="error"></div>
                 </div>
-                <div id="divPassword">
-                    <label for="password">Password</label>
-                    <input id="inputPassword" type="password" placeholder="Password" required>
+                <div class="inputBox">
+                    <input id="password2" type="password" required="required">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Confirm password</span>
+                    <div class="error"></div>
                 </div>
-                <div id="divConfirmPassword">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input id="inputConfirmPassword" type="password" placeholder="Confirm Password" required>
+                <div class="inputBox">
+                    <!-- <button class="submit" type="submit">hola</button> -->
+                    <input class="submit" type="submit" value="Create account">
                 </div>
-                <div>
-                    <button id="btnClear" type="submit">Reload</button>
-                    <button type="submit">Register</button>
-                </div>
+                <p>Already have an account? <a href="./login.html" class="login">Login</a></p>
             </form>
-        </section>
+        </div>
     </main>
+    <script src="../JavaScript/cursor.js"></script>
+    <script src="../JavaScript/header.js"></script>
     <script src="../JavaScript/sign-up.js"></script>
 </body>
 </html>

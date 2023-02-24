@@ -1,0 +1,21 @@
+// Home page buttom "Shop-now"
+
+.Shop-now__buttom{
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 5vh;
+    width: 19vw;
+    margin-top: 5%;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.Shop-now__buttom:hover{
+    background-color: $tertiary-color;
+    color: $primary-color;
+    border: 3px solid $primary-color;
+    font-weight: bold;
+}

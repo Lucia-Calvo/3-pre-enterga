@@ -12,12 +12,12 @@
     <link rel="shortcut icon" href="../Images/audio-waves.png">
     <title>Baire | Login</title>
 </head>
-<body>
-    <main class="login-container">
+<body class="body-login">
+    <main class="signup-main">
+        <div class="cursor"></div>
         <header class="header">
-            <img class="header__logo" src="../Images/audio-waves.png" alt="logo-icon">
+            <a href="../index.html"><img class="header__logo" src="../Images/audio-waves.png" alt="logo-icon"></a>
             <button id="open" class="open-menu"><i class="bi bi-list"></i></button>
-            
             <nav class="navbar" id="navbar">
                 <button id="close" class="close-menu"><i class="bi bi-x"></i></button>
                 <ul class="navbar__items">
@@ -27,36 +27,27 @@
                 </ul>
             </nav>
         </header>
-        
-        <section class="login-section">
-
-            <div id="div-img">
-                <img src="../Images/login-pic.jpg" alt="">
+        <div class="container">
+            <div class="form signup">
+                <h2>Login</h2>
+                <div class="inputBox">
+                    <input type="text" required="required">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Username</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Password</span>
+                </div>
+                <div class="inputBox">
+                    <input class="submit" type="submit" value="Login">
+                </div>
+                <p>Not registered? <a href="./sign-up.html" class="create">Create an account</a></p>
             </div>
-            <form id="form-user" action="">
-                <div id="div-login">
-                    <h2 class="div-login__title">Login</h2>
-                    <p class="div-login__parraf">Don't have an account? <a href="./sign-up.html">Register</a></p>
-                </div>
-                <div id="div-email">
-                    <label for="username"></label>
-                    <input type="text" name="username" id="div-email__input" placeholder="Username" required>
-                </div>
-                <div id="div-password">
-                    <label for="password"></label>
-                    <input type="password" name="password" id="div-password__input" placeholder="Password" required>
-                </div>
-                <div id="div__remember-password">
-                    <label><input type="checkbox">Remember me</label>
-                </div>
-                <div id="div-button">
-                    <button class="div-button__submit" type="submit">Login</button>
-                </div>
-            </form>
-            
-        </section>
-
+        </div>
     </main>
+    <script src="../JavaScript/cursor.js"></script>
     <script src="../JavaScript/header.js"></script>
 </body>
 </html>
