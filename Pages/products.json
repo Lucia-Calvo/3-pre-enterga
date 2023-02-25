@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "sys": { "id": "1" },
+            "fields": {
+                "title": "Beat Solo Wireless",
+                "price": 200,
+                "image": { "fields": { "file": { "url": "../Images/producto1.png" } } }
+            }
+        },
+        {
+            "sys": { "id": "2" },
+            "fields": {
+                "title": "Beat Solo Wireless",
+                "price": 200,
+                "image": { "fields": { "file": { "url": "../Images/producto2.png" } } }
+            }
+        },
+        {
+            "sys": { "id": "3" },
+            "fields": {
+                "title": "Beat Solo Wireless",
+                "price": 200,
+                "image": { "fields": { "file": { "url": "../Images/producto3.png" } } }
+        }
+        },
+        {
+            "sys": { "id": "4" },
+            "fields": {
+                "title": "Beat Solo Wireless",
+                "price": 200,
+                "image": { "fields": { "file": { "url": "../Images/producto4.png" } } }
+        }
+        }
+    ]
+}
